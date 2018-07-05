@@ -38,3 +38,11 @@ assert.equal(g.G, "G");
 // TODO
 // node_modules + package
 // async require
+
+console.log("resolve the module name which includes '!'");
+var h = require("h!");
+assert.equal(h.A, "A");
+
+var i = require("i");
+console.log("resolve the module name which ends with '!'");
+assert.equal(i.A, "A");
