@@ -45,7 +45,7 @@ global.define = function (id, deps, factory) {
             return callback.apply(this, relativeId.map(req))
         }
         
-        var chunks = relativeId.split("!");
+        var chunks = relativeId.split("!").filter(chunk => chunk.length > 0);
         var prefix;
         if (chunks.length >= 2) {
             prefix = chunks[0];
